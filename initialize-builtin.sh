@@ -17,7 +17,6 @@ if [ -z "$(ls -A /config)" ]; then
    cp /initializer/fastcgi_params /config/nginx/fastcgi_params
    cp /initializer/mime.types /config/nginx/mime.types
    cp /initializer/default /config/nginx/site-confs/default
-   cp -rv /altscreen-source/* /config/www/
    service mysql start
    cat /initializer/initializedb.sql | mysql
    echo "; Add any php.ini entry here to overwrite any php.ini configuration" > /config/php/php-overwrite.ini
